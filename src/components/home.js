@@ -5,7 +5,7 @@ import Content from "./content";
 
 const Home = () => {
   return (
-    <Container maxW={"7xl"} px={"3rem"}>
+    <Container maxW={"7xl"} px={"4rem"}>
       <Navbar />
       <Content />
     </Container>
