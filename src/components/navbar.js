@@ -1,6 +1,7 @@
-import { Container, Flex, Img, Text } from "@chakra-ui/react";
+import { Container, Flex, Img } from "@chakra-ui/react";
 import logo from "../asset/logo.png";
 import avi from "../asset/avi.png";
+import { Link } from "react-router-dom";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
@@ -18,21 +19,26 @@ const Navbar = () => {
         <Flex justifyContent={"flex-start"} alignItems={"center"} gap={"4rem"}>
           <Img src={logo} alt="logo" />
           <Flex gap={"2rem"}>
-            <Text fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
+            <Link
+              to="/"
+              fontSize={"16px"}
+              color={"blackAlpha.600"}
+              cursor={"pointer"}
+            >
               Collections
-            </Text>
-            <Text fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
+            </Link>
+            {/* <Link fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
               Men
-            </Text>
-            <Text fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
+            </Link>
+            <Link fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
               Women
-            </Text>
-            <Text fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
+            </Link>
+            <Link fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
               About
-            </Text>
-            <Text fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
+            </Link>
+            <Link fontSize={"16px"} color={"blackAlpha.600"} cursor={"pointer"}>
               Contact
-            </Text>
+            </Link> */}
           </Flex>
         </Flex>
         <Flex
@@ -40,7 +46,9 @@ const Navbar = () => {
           alignItems={"center"}
           gap={"2rem"}
         >
-          <AiOutlineShoppingCart cursor={"pointer"} />
+          <Link to="/cart">
+            <AiOutlineShoppingCart cursor={"pointer"} />
+          </Link>
           <Img src={avi} alt="avatar" width={"40px"} h={"40px"} />
         </Flex>
       </Flex>

@@ -8,20 +8,29 @@ import {
   Input,
 } from "@chakra-ui/react";
 import React from "react";
-import product1 from "../asset/product1.jpg";
+import product1 from "../../asset/product1.jpg";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Products } from "./products";
+import Product from "./product";
 
-const Content = () => {
+const Shop = () => {
   return (
-    <Container maxW={"7xl"} mt={"5rem"} px={"4rem"} position={"relative"}>
+    <Container maxW={"7xl"} mt={"3rem"} px={"4rem"} position={"relative"}>
       <Flex gap={"7rem"} alignItems={"center"}>
-        <Img
-          src={product1}
-          alt="product_1"
-          width={"420px"}
-          h={"420px"}
-          borderRadius={"15px"}
-        />
+        <Flex flexDir={"column"}>
+          <Img
+            src={product1}
+            alt="product_1"
+            width={"420px"}
+            h={"420px"}
+            borderRadius={"15px"}
+          />
+          <Flex mt={"2rem"} justifyContent={"space-between"}>
+            {Products.map((item, index) => (
+              <Product key={index} productImage={item.productImage} />
+            ))}
+          </Flex>
+        </Flex>
         <Box width={"45%"}>
           <Text
             textTransform={"uppercase"}
@@ -73,7 +82,7 @@ const Content = () => {
       <Flex
         position={"absolute"}
         gap={"1.5rem"}
-        top={390}
+        top={430}
         left={595}
         width={"40%"}
       >
@@ -110,7 +119,7 @@ const Content = () => {
           width={"40%"}
           backgroundColor={"orange.400"}
           color={"#fff"}
-          fontSize={"14px"}
+          fontSize={"13px"}
           display={"flex"}
           gap={".5rem"}
           justifyContent={"center"}
@@ -123,4 +132,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Shop;
