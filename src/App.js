@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <ChakraProvider>
-      <Container maxW={"7xl"} px={"4rem"}>
+      <Container maxW={"7xl"}>
         <Router>
           <Navbar />
           <Routes>

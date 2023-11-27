@@ -1,0 +1,10 @@
+.current:hover {
+  opacity: 0.5;
+  border: 2px solid orange;
+  border-radius: 8px;
+}
+
+.current:visited {
+  opacity: 0.5;
+  border: 1px solid orange;
+}
