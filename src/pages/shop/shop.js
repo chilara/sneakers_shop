@@ -28,7 +28,7 @@ const Shop = () => {
     >
       <Flex
         flexDir={{ lg: "row", md: "row", base: "column" }}
-        gap={{ lg: "7rem", md: "3rem" }}
+        gap={{ lg: "4.5rem", md: "3rem" }}
         alignItems={"center"}
       >
         <Flex flexDir={"column"}>
@@ -104,7 +104,11 @@ const Shop = () => {
             </a>
           </Flex>
         </Flex>
-        <Box width={{ lg: "45%", base: "100%" }} mt={{ lg: "0", base: "2rem" }}>
+        <Box
+          width={{ lg: "45%", base: "100%" }}
+          mt={{ lg: "0", base: "2rem" }}
+          px={{ lg: "2rem", base: "1rem" }}
+        >
           <Text
             textTransform={"uppercase"}
             fontSize={"13px"}
@@ -191,7 +195,7 @@ const Shop = () => {
               </Button>
               <Input
                 backgroundColor={"gray.100"}
-                w={{ lg: "20%", base: "80%" }}
+                w={{ lg: "50%", base: "80%" }}
                 height={{ lg: "40px", base: "50px" }}
                 borderRadius={"0"}
                 borderRight={"0"}
@@ -212,7 +216,7 @@ const Shop = () => {
               </Button>
             </Box>
             <Button
-              width={{ lg: "50%", md: "50%" }}
+              width={{ lg: "80%", md: "50%" }}
               height={{ lg: "40px", base: "50px" }}
               backgroundColor={"orange.400"}
               color={"#fff"}
